@@ -56,3 +56,24 @@ spotdl: error: argument operation: invalid choice: 'list' (choose from 'download
 2025-10-18 18:39:44,406 [ERROR] - Falha ao decodificar a saída do 'spotdl save' para https://open.spotify.com/playlist/37i9dQZF1DZ06evO2Gqkfk?si=McpHahFwRiG070zmhWugZQ.
 2025-10-18 18:39:44,406 [ERROR] - Pulando esta playlist devido a erro anterior.
 2025-10-18 18:39:44,406 [INFO] - Ciclo de verificação completo. Aguardando 30 minutos.
+2025-10-18 18:44:31,410 [INFO] - --- Serviço de Sincronia Spotify Iniciado ---
+2025-10-18 18:44:31,410 [INFO] - Usando spotdl em: /home/leo-rib/venv/bin/spotdl
+2025-10-18 18:44:31,411 [INFO] - Iniciando novo ciclo de verificação. 0 músicas na lista de ignorados.
+2025-10-18 18:44:31,411 [INFO] - Processando playlist: https://open.spotify.com/playlist/37i9dQZF1DZ06evO2Gqkfk?si=McpHahFwRiG070zmhWugZQ -> /home/leo-rib/Músicas/The_faint
+2025-10-18 18:44:31,411 [INFO] - Buscando músicas da playlist: https://open.spotify.com/playlist/37i9dQZF1DZ06evO2Gqkfk?si=McpHahFwRiG070zmhWugZQ
+2025-10-18 18:45:07,094 [WARNING] - Playlist não retornou nenhuma música (pode estar vazia, ser inválida, ou a saída do spotdl estava ilegível).
+2025-10-18 18:45:07,094 [WARNING] - Saída bruta recebida: Processing query:                                                               
+https://open.spotify.com/playlist/37i9dQZF1DZ06evO2Gqkfk?si=McpHahFwRiG070zmhWug
+ZQ                                                                              
+Found 45 songs in This Is The Faint (Playlist)                                  
+[
+    {
+        "name": "Worked Up So Sexual",
+        "artists": [
+            "The Faint"
+        ],
+        "artist": "The Faint",
+        "genres": [
+            "electrocl
+2025-10-18 18:45:07,094 [INFO] - Playlist finalizada. 0 novas músicas baixadas.
+2025-10-18 18:45:07,094 [INFO] - Ciclo de verificação completo. Aguardando 30 minutos.

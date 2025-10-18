@@ -80,23 +80,31 @@ def get_playlist_songs(playlist_url, spotdl_path):
     """Usa 'spotdl save' para obter todas as músicas de uma playlist."""
     logging.info(f"Buscando músicas da playlist: {playlist_url}")
     try:
-        # CORREÇÃO: Trocado 'list' por 'save' e adicionado '--save-file -'
-        # O '-' instrui o spotdl a imprimir o JSON no stdout em vez de um arquivo.
+        # O comando está correto: 'save' com '--save-file -'
         result = subprocess.run(
             [spotdl_path, 'save', playlist_url, '--save-file', '-'],
             capture_output=True, text=True, check=True, encoding='utf-8',
             timeout=120 # Timeout de 2 minutos
         )
         
-        stdout_lines = result.stdout.strip().splitlines()
-        if not stdout_lines:
-            logging.warning("Playlist não retornou músicas (pode estar vazia ou ser inválida).")
+        # --- NOVA CORREÇÃO ---
+        # Filtra a saída (stdout) para pegar APENAS linhas que são JSON.
+        # Isso remove logs de progresso ou outros textos que poluem a saída.
+        json_lines = [
+            line for line in result.stdout.strip().splitlines()
+            if line.strip().startswith("{") and line.strip().endswith("}")
+        ]
+        
+        if not json_lines:
+            logging.warning("Playlist não retornou nenhuma música (pode estar vazia, ser inválida, ou a saída do spotdl estava ilegível).")
+            logging.warning(f"Saída bruta recebida: {result.stdout[:500]}") # Loga o que recebemos
             return []
         
-        # O 'save' retorna uma lista de JSONs, um por linha.
-        # Precisamos envolvê-los em colchetes para ser um array JSON válido.
-        json_string = f"[{','.join(stdout_lines)}]"
+        # Constrói o array JSON apenas com as linhas válidas
+        json_string = f"[{','.join(json_lines)}]"
         songs = json.loads(json_string)
+        # --- FIM DA NOVA CORREÇÃO ---
+        
         logging.info(f"Encontradas {len(songs)} músicas na playlist.")
         return songs
 
@@ -104,8 +112,11 @@ def get_playlist_songs(playlist_url, spotdl_path):
         # A saída de erro do 'spotdl' vai para o stderr
         logging.error(f"Falha ao executar 'spotdl save' para {playlist_url}: {e.stderr}")
         return None
-    except json.JSONDecodeError:
-        logging.error(f"Falha ao decodificar a saída do 'spotdl save' para {playlist_url}.")
+    except json.JSONDecodeError as e_json:
+        # Este log agora será mais específico se a filtragem falhar
+        logging.error(f"Falha ao decodificar a saída filtrada do 'spotdl save' para {playlist_url}.")
+        logging.error(f"Erro de JSON: {e_json}")
+        logging.error(f"Dados brutos recebidos (primeiros 500 caracteres): {result.stdout[:500]}")
         return None
     except Exception as e:
         logging.error(f"Erro inesperado ao buscar playlist {playlist_url}: {e}")
