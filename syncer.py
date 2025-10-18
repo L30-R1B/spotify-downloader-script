@@ -77,11 +77,13 @@ def add_to_defective_list(song_id, defective_set):
         logging.info(f"ID {song_id} adicionado à lista de defeituosos.")
 
 def get_playlist_songs(playlist_url, spotdl_path):
-    """Usa 'spotdl list' para obter todas as músicas de uma playlist."""
+    """Usa 'spotdl save' para obter todas as músicas de uma playlist."""
     logging.info(f"Buscando músicas da playlist: {playlist_url}")
     try:
+        # CORREÇÃO: Trocado 'list' por 'save' e adicionado '--save-file -'
+        # O '-' instrui o spotdl a imprimir o JSON no stdout em vez de um arquivo.
         result = subprocess.run(
-            [spotdl_path, 'list', playlist_url],
+            [spotdl_path, 'save', playlist_url, '--save-file', '-'],
             capture_output=True, text=True, check=True, encoding='utf-8',
             timeout=120 # Timeout de 2 minutos
         )
@@ -91,17 +93,19 @@ def get_playlist_songs(playlist_url, spotdl_path):
             logging.warning("Playlist não retornou músicas (pode estar vazia ou ser inválida).")
             return []
         
-        # Constrói um JSON Array válido a partir das linhas de stdout
+        # O 'save' retorna uma lista de JSONs, um por linha.
+        # Precisamos envolvê-los em colchetes para ser um array JSON válido.
         json_string = f"[{','.join(stdout_lines)}]"
         songs = json.loads(json_string)
         logging.info(f"Encontradas {len(songs)} músicas na playlist.")
         return songs
 
     except subprocess.CalledProcessError as e:
-        logging.error(f"Falha ao executar 'spotdl list' para {playlist_url}: {e.stderr}")
+        # A saída de erro do 'spotdl' vai para o stderr
+        logging.error(f"Falha ao executar 'spotdl save' para {playlist_url}: {e.stderr}")
         return None
     except json.JSONDecodeError:
-        logging.error(f"Falha ao decodificar a saída do 'spotdl list' para {playlist_url}.")
+        logging.error(f"Falha ao decodificar a saída do 'spotdl save' para {playlist_url}.")
         return None
     except Exception as e:
         logging.error(f"Erro inesperado ao buscar playlist {playlist_url}: {e}")

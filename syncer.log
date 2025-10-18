@@ -48,3 +48,11 @@ spotdl: error: argument operation: invalid choice: 'list' (choose from 'download
 
 2025-10-18 18:33:06,890 [ERROR] - Pulando esta playlist devido a erro anterior.
 2025-10-18 18:33:06,890 [INFO] - Ciclo de verificação completo. Aguardando 30 minutos.
+2025-10-18 18:38:59,150 [INFO] - --- Serviço de Sincronia Spotify Iniciado ---
+2025-10-18 18:38:59,150 [INFO] - Usando spotdl em: /home/leo-rib/venv/bin/spotdl
+2025-10-18 18:38:59,150 [INFO] - Iniciando novo ciclo de verificação. 0 músicas na lista de ignorados.
+2025-10-18 18:38:59,150 [INFO] - Processando playlist: https://open.spotify.com/playlist/37i9dQZF1DZ06evO2Gqkfk?si=McpHahFwRiG070zmhWugZQ -> /home/leo-rib/Músicas/The_faint
+2025-10-18 18:38:59,150 [INFO] - Buscando músicas da playlist: https://open.spotify.com/playlist/37i9dQZF1DZ06evO2Gqkfk?si=McpHahFwRiG070zmhWugZQ
+2025-10-18 18:39:44,406 [ERROR] - Falha ao decodificar a saída do 'spotdl save' para https://open.spotify.com/playlist/37i9dQZF1DZ06evO2Gqkfk?si=McpHahFwRiG070zmhWugZQ.
+2025-10-18 18:39:44,406 [ERROR] - Pulando esta playlist devido a erro anterior.
+2025-10-18 18:39:44,406 [INFO] - Ciclo de verificação completo. Aguardando 30 minutos.
