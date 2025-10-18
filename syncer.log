@@ -77,3 +77,18 @@ Found 45 songs in This Is The Faint (Playlist)
             "electrocl
 2025-10-18 18:45:07,094 [INFO] - Playlist finalizada. 0 novas músicas baixadas.
 2025-10-18 18:45:07,094 [INFO] - Ciclo de verificação completo. Aguardando 30 minutos.
+2025-10-18 18:50:21,665 [INFO] - --- Serviço de Sincronia Spotify Iniciado ---
+2025-10-18 18:50:21,666 [INFO] - Usando spotdl em: /home/leo-rib/venv/bin/spotdl
+2025-10-18 18:50:21,666 [INFO] - Iniciando novo ciclo de verificação. 0 músicas na lista de ignorados.
+2025-10-18 18:50:21,666 [INFO] - Processando playlist: https://open.spotify.com/playlist/37i9dQZF1DZ06evO2Gqkfk?si=McpHahFwRiG070zmhWugZQ -> /home/leo-rib/Músicas/The_faint
+2025-10-18 18:50:21,666 [INFO] - Buscando músicas da playlist: https://open.spotify.com/playlist/37i9dQZF1DZ06evO2Gqkfk?si=McpHahFwRiG070zmhWugZQ
+2025-10-18 18:50:56,667 [INFO] - Encontradas 45 músicas na playlist.
+2025-10-18 18:51:22,684 [INFO] - BAIXADA: Worked Up So Sexual - The Faint
+2025-10-18 18:51:52,351 [INFO] - BAIXADA: I Disappear - The Faint
+2025-10-18 18:52:22,213 [INFO] - BAIXADA: The Geeks Were Right - The Faint
+2025-10-18 18:52:50,522 [INFO] - BAIXADA: Desperate Guys - The Faint
+2025-10-18 18:53:19,262 [INFO] - BAIXADA: Agenda Suicide - The Faint
+2025-10-18 18:53:45,084 [INFO] - BAIXADA: Dropkick the Punks - The Faint
+2025-10-18 18:54:16,801 [INFO] - BAIXADA: The Conductor - The Faint
+2025-10-18 18:54:47,290 [INFO] - BAIXADA: Evil Voices - The Faint
+2025-10-18 18:55:15,759 [INFO] - BAIXADA: Glass Danse - The Faint

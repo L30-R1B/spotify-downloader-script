@@ -87,21 +87,23 @@ def get_playlist_songs(playlist_url, spotdl_path):
             timeout=120 # Timeout de 2 minutos
         )
         
-        # --- NOVA CORREÇÃO ---
-        # Filtra a saída (stdout) para pegar APENAS linhas que são JSON.
-        # Isso remove logs de progresso ou outros textos que poluem a saída.
-        json_lines = [
-            line for line in result.stdout.strip().splitlines()
-            if line.strip().startswith("{") and line.strip().endswith("}")
-        ]
+        stdout_data = result.stdout
         
-        if not json_lines:
-            logging.warning("Playlist não retornou nenhuma música (pode estar vazia, ser inválida, ou a saída do spotdl estava ilegível).")
-            logging.warning(f"Saída bruta recebida: {result.stdout[:500]}") # Loga o que recebemos
+        # --- NOVA CORREÇÃO v3 ---
+        # A saída do 'save' inclui texto de progresso ANTES do JSON.
+        # Vamos encontrar o início do JSON, que é o primeiro caractere '['
+        
+        json_start_index = stdout_data.find('[')
+        
+        if json_start_index == -1:
+            # Se não encontrar um '[' (início da lista), algo deu errado.
+            logging.warning("Não foi possível encontrar o início do JSON (caractere '[') na saída do spotdl.")
+            logging.warning(f"Saída bruta recebida: {stdout_data[:500]}")
             return []
+            
+        # Pega a string do JSON a partir do '['
+        json_string = stdout_data[json_start_index:]
         
-        # Constrói o array JSON apenas com as linhas válidas
-        json_string = f"[{','.join(json_lines)}]"
         songs = json.loads(json_string)
         # --- FIM DA NOVA CORREÇÃO ---
         
@@ -114,9 +116,9 @@ def get_playlist_songs(playlist_url, spotdl_path):
         return None
     except json.JSONDecodeError as e_json:
         # Este log agora será mais específico se a filtragem falhar
-        logging.error(f"Falha ao decodificar a saída filtrada do 'spotdl save' para {playlist_url}.")
+        logging.error(f"Falha ao decodificar a saída do 'spotdl save' para {playlist_url}.")
         logging.error(f"Erro de JSON: {e_json}")
-        logging.error(f"Dados brutos recebidos (primeiros 500 caracteres): {result.stdout[:500]}")
+        logging.error(f"Dados brutos que tentamos decodificar (a partir do '['): {json_string[:500]}")
         return None
     except Exception as e:
         logging.error(f"Erro inesperado ao buscar playlist {playlist_url}: {e}")
