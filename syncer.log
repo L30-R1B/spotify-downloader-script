@@ -92,3 +92,48 @@ Found 45 songs in This Is The Faint (Playlist)
 2025-10-18 18:54:16,801 [INFO] - BAIXADA: The Conductor - The Faint
 2025-10-18 18:54:47,290 [INFO] - BAIXADA: Evil Voices - The Faint
 2025-10-18 18:55:15,759 [INFO] - BAIXADA: Glass Danse - The Faint
+2025-10-18 18:55:42,381 [INFO] - BAIXADA: Posed To Death - The Faint
+2025-10-18 18:56:13,156 [INFO] - BAIXADA: Let the Poison Spill from Your Throat - The Faint
+2025-10-18 18:56:42,581 [INFO] - BAIXADA: Southern Belles In London Sing - The Faint
+2025-10-18 18:57:33,821 [INFO] - BAIXADA: Young & Realistic - The Faint
+2025-10-18 18:58:21,253 [INFO] - BAIXADA: Your Retro Career Melted - The Faint
+2025-10-18 18:58:52,019 [INFO] - BAIXADA: Forever Growing Centipedes - The Faint
+2025-10-18 18:59:20,696 [INFO] - BAIXADA: Birth - The Faint
+2025-10-18 18:59:49,301 [INFO] - BAIXADA: Mirror Error - The Faint
+2025-10-18 19:00:17,283 [INFO] - BAIXADA: Total Job - The Faint
+2025-10-18 19:00:45,100 [INFO] - BAIXADA: Symptom Finger - The Faint
+2025-10-18 19:01:16,871 [INFO] - BAIXADA: Get Seduced - The Faint
+2025-10-18 19:01:48,371 [INFO] - BAIXADA: Teach Me - The Faint
+2025-10-18 19:02:47,972 [INFO] - BAIXADA: Call Call - The Faint
+2025-10-18 19:03:16,352 [INFO] - BAIXADA: Life’s a Joke - The Faint
+2025-10-18 19:03:43,467 [INFO] - BAIXADA: Psycho - The Faint
+2025-10-18 19:04:12,550 [INFO] - BAIXADA: Dust - The Faint
+2025-10-18 19:04:42,503 [INFO] - BAIXADA: Egowerk - The Faint
+2025-10-18 19:05:09,005 [INFO] - BAIXADA: In Concert - The Faint
+2025-10-18 19:05:36,994 [INFO] - BAIXADA: Alien Angel - The Faint
+2025-10-18 19:06:04,223 [INFO] - BAIXADA: Lesson From The Darkness - The Faint
+2025-10-18 19:06:32,232 [INFO] - BAIXADA: Fulcrum & Lever - The Faint
+2025-10-18 19:07:00,691 [INFO] - BAIXADA: Sex Is Personal - The Faint
+2025-10-18 19:07:28,324 [INFO] - BAIXADA: Chameleon Nights - The Faint
+2025-10-18 19:07:59,001 [INFO] - BAIXADA: Mote - The Faint
+2025-10-18 19:08:25,802 [INFO] - BAIXADA: Loss Of Head - The Faint
+2025-10-18 19:08:53,148 [INFO] - BAIXADA: Victim Convenience - The Faint
+2025-10-18 19:09:23,227 [INFO] - BAIXADA: Child Asleep - The Faint
+2025-10-18 19:09:49,409 [INFO] - BAIXADA: Cars Pass In Cold Blood - The Faint
+2025-10-18 19:10:53,060 [INFO] - BAIXADA: Falling Out Of Love At This Volume - The Faint
+2025-10-18 19:11:38,129 [INFO] - BAIXADA: Help In The Head - The Faint
+2025-10-18 19:11:38,129 [INFO] - Playlist finalizada. 39 novas músicas baixadas.
+2025-10-18 19:11:38,129 [INFO] - Ciclo de verificação completo. Aguardando 30 minutos.
+2025-10-18 19:41:38,130 [INFO] - Iniciando novo ciclo de verificação. 0 músicas na lista de ignorados.
+2025-10-18 19:41:38,131 [INFO] - Processando playlist: https://open.spotify.com/playlist/37i9dQZF1DZ06evO2Gqkfk?si=McpHahFwRiG070zmhWugZQ -> /home/leo-rib/Músicas/The_faint
+2025-10-18 19:41:38,131 [INFO] - Buscando músicas da playlist: https://open.spotify.com/playlist/37i9dQZF1DZ06evO2Gqkfk?si=McpHahFwRiG070zmhWugZQ
+2025-10-18 19:42:18,544 [INFO] - Encontradas 45 músicas na playlist.
+2025-10-18 19:51:19,139 [INFO] - Playlist finalizada. 0 novas músicas baixadas.
+2025-10-18 19:51:19,139 [INFO] - Processando playlist: https://open.spotify.com/playlist/1cBglWoTYaFS2DNjKupqCO?si=jy9cL73dStewa30vtq4QpQ -> /home/leo-rib/Músicas/iii_ala_o_cabra_ficou_triste
+2025-10-18 19:51:19,139 [INFO] - Buscando músicas da playlist: https://open.spotify.com/playlist/1cBglWoTYaFS2DNjKupqCO?si=jy9cL73dStewa30vtq4QpQ
+2025-10-18 19:51:22,309 [INFO] - --- Serviço de Sincronia Spotify Iniciado ---
+2025-10-18 19:51:22,309 [INFO] - Usando spotdl em: /home/leo-rib/venv/bin/spotdl
+2025-10-18 19:51:22,309 [INFO] - Iniciando novo ciclo de verificação. 0 músicas na lista de ignorados.
+2025-10-18 19:51:22,309 [INFO] - Processando playlist: https://open.spotify.com/playlist/37i9dQZF1DZ06evO2Gqkfk?si=McpHahFwRiG070zmhWugZQ -> /home/leo-rib/Músicas/The_faint
+2025-10-18 19:51:22,309 [INFO] - Buscando músicas da playlist: https://open.spotify.com/playlist/37i9dQZF1DZ06evO2Gqkfk?si=McpHahFwRiG070zmhWugZQ
+2025-10-18 19:51:58,036 [INFO] - Encontradas 45 músicas na playlist.
